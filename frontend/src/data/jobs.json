@@ -1,0 +1,26 @@
+[
+  {
+    "title": "React Developer",
+    "rate": "$420/hr",
+    "company": "Codeworks",
+    "date": "12 Mar 2024",
+    "bg": "bg-lime-50",
+    "badge": "bg-lime-500"
+  },
+  {
+    "title": "Product Designer",
+    "rate": "$213/hr",
+    "company": "PixelForge",
+    "date": "26 Mar 2024",
+    "bg": "bg-orange-50",
+    "badge": "bg-orange-500"
+  },
+  {
+    "title": "Chef Leader",
+    "rate": "$862/hr",
+    "company": "Bistro Group",
+    "date": "08 Mar 2024",
+    "bg": "bg-rose-50",
+    "badge": "bg-rose-500"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Northwind",
+    "color": "bg-rose-500"
+  },
+  {
+    "name": "Hexa",
+    "color": "bg-amber-500"
+  },
+  {
+    "name": "Flowly",
+    "color": "bg-emerald-500"
+  },
+  {
+    "name": "Verge",
+    "color": "bg-sky-500"
+  },
+  {
+    "name": "Orbital",
+    "color": "bg-indigo-500"
+  },
+  {
+    "name": "Pulse",
+    "color": "bg-pink-500"
+  }
+]

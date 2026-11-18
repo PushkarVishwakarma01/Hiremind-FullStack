@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: hiremind-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: HireMind
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: StrongPassword123!
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: .
+    container_name: hiremind-backend
+    restart: unless-stopped
+
+    depends_on:
+      - postgres
+
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_URL: jdbc:postgresql://postgres:5432/HireMind
+      DB_USERNAME: postgres
+      DB_PASSWORD: StrongPassword123!
+
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION_MS: ${JWT_EXPIRATION_MS}
+
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      OAUTH_REDIRECT_URI: ${OAUTH_REDIRECT_URI}
+
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
