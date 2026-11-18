@@ -1,6 +1,14 @@
+
 target/
-.git
+.git/
 .idea/
 .vscode/
 *.iml
 *.log
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key

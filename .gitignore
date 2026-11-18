@@ -1,7 +1,32 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Java / Maven
 target/
 *.class
+
+# IDE
 .idea/
 .vscode/
-.env
+*.iml
 
+# Logs
+*.log
+logs/
 
+# OS files
+.DS_Store
+Thumbs.db
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.jks
+
+# Node
+node_modules/
+dist/
